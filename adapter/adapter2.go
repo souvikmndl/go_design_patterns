@@ -1,4 +1,4 @@
-package main
+package adapter
 
 /*
 A classic, practical example of the Adapter Pattern is integrating a modern system that uses JSON with a legacy system (or a third-party analytics tool) that only understands XML.

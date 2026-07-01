@@ -1,4 +1,4 @@
-package main
+package singleton
 
 // Welcome to your channel go guru
 
