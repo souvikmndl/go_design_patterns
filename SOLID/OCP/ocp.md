@@ -12,11 +12,29 @@ This means:
 How this appears in a production Go project A typical project structure might
 look like this:
 
-`internal/ │ ├── domain/ │   └── payment.go │ ├── service/ │   └── payment_service.go │ ├── payment/ │   ├── creditcard.go │   ├── paypal.go │   ├── stripe.go │   └── bitcoin.go │ └── cmd/     └── main.go`
+`internal/
+│
+├── domain/
+│   └── payment.go
+│
+├── service/
+│   └── payment_service.go
+│
+├── payment/
+│   ├── creditcard.go
+│   ├── paypal.go
+│   ├── stripe.go
+│   └── bitcoin.go
+│
+└── cmd/
+    └── main.go
+`
 
 The service package depends only on the interface:
 
-`type PaymentProcessor interface {      Pay(amount float64) error  }`
+`type PaymentProcessor interface {      
+    Pay(amount float64) error  
+}`
 
 Each concrete implementation lives in its own file/package. Adding a new payment
 method means adding a new implementation without modifying the service.
